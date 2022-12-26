@@ -1,0 +1,281 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+::placeholder{
+    color: rgb(195, 189, 189);
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+.link{
+    text-decoration: none;
+    color: #086C62;
+}
+.sign{
+    display: flex;
+    height: 100vh;
+}
+.sign .left-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 35%;
+
+}
+.sign .left-box .btn-group{
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+.sign .left-box .btn-group button,.form-sign-btn,.right-box button{
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10 !important;
+}
+.sign .left-box .btn-group button::after,.form-sign-btn::after,.right-box button::after{  
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background-color: #fff;
+    color: #086C62;
+    transition: .3s;
+    mix-blend-mode: soft-light;
+}
+.sign .left-box .btn-group button:hover::after,.form-sign-btn:hover::after,.right-box button:hover::after{
+    width: 100%;
+    z-index: 1;
+
+}
+.sign .left-box .btn-group button:hover::after button{
+    color: #086C62;
+    border: 1px solid #086C62;
+}
+.sign .left-box .btn-group button{
+    color: black;
+}
+.sign .left-box .btn-group button:nth-child(2){
+    background-color: #f1f1f1;
+}
+.sign .left-box{
+    padding: 40px 20px;
+}
+form{
+    width: 80%;
+}
+
+form .sign-input{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #ddd;
+    position: relative;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+form.signin h2{
+    color: #086C62;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+form.signin p{
+    line-height: 1.5;
+    font-size: 17px;
+    color: #086C62;
+    margin-bottom: 40px;
+}
+form.signin .forgetlink{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+form .sign-input label{
+    position: absolute;
+    top: -10px;
+    left: 19px;
+    display: inline-block;
+    background-color: #fff;
+    padding: 0px 10px;
+}
+form .sign-input input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 30px;
+
+}
+form .link{
+    text-align: right;
+    font-weight: 600;
+    margin-left: auto;
+    display: block;
+    font-size: 18px;
+}
+.form-sign-btn{
+background-color: #086C62;
+padding: 15px 40px;
+font-size: 16px;
+border-radius: 10px;
+font-weight: bold;
+margin: 40px auto;
+display: block;
+}
+form.active{
+    display: block;
+    animation: fade .9s 1 ease-in-out;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%) scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%) scale(1);
+    }
+}
+form.hidden{
+    display: none;
+}
+.sign .left-box .btn-group button.active{
+    background-color: #086C62 ;
+    color: #fff ;
+}
+
+.social-sign ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.social-sign p{
+    margin: 0px auto 15px;
+}
+.social-sign ul li{
+display: inline-block;
+}
+.social-sign ul li img{
+    width: 50px;
+    height: 50px;
+
+}
+/* start right-box */
+.right-box{
+    background: url(../images/illustration.png);
+    background-size: cover;
+    background-position-x: 65%;
+    width: 65%;
+    border-left: 2px solid #086C62;
+}
+@media(max-width:991px){
+    .sign{
+        display: block;
+    }
+    .right-box{
+        display: none;
+    }
+    .left-box{
+        width: 100% !important;
+        text-align: center
+    }
+    
+}
+.header{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+}
+.header nav{
+    flex: 1;
+    text-align: left;
+}
+
+.header nav ul li{
+    display: inline-block;
+}
+.header nav ul li .link{
+    margin-right: 30px;
+    font-size: 20px;
+    position: relative;
+}
+.header nav ul li .link::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #086C62;
+    width: 0px;
+    height: 2px;
+    transition: .3s;
+}
+.header nav ul li .link:hover::after{
+    width: 100%
+}
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+.right-box button{
+    background-color: #086C62;
+    margin: 150px 50px 15px;
+}
+.right-box p{
+    font-size: 28px;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    color:#086C62;
+    margin-top: 25px;
+    padding-left: 20px;
+}
+.privay-a{
+    text-decoration: none;
+    display: inline-block;
+    color: #333;
+}
+.privay-p{
+    text-decoration: none;
+    color: #888;
+}
+/* start welcome */
+.welcome{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #086C62;
+    color: white;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+}
+.welcome.active{
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 999;
+}
+@media (max-width:991px){
+    .welcome{
+        font-size: 40px;
+        text-align: center;
+    }
+}

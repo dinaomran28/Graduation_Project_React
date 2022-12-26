@@ -1,0 +1,142 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+.link{
+    text-decoration: none;
+    color: #086C62;
+}
+.send-email{
+    display: flex;
+    height: 100vh;
+}
+.send-email .left-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 35%;
+}
+.image-sendEmail{
+    width: 350px;
+    height: 350px;
+}
+.send-email .left-box h5{
+color: #111111;
+letter-spacing: -0.63px;
+text-transform: capitalize;
+font-size:18px;
+font-weight:300;
+align-items: center;
+}
+.send-email .left-box span{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: #111111;
+letter-spacing: -0.63px;
+text-transform: capitalize;
+font-size:18px;
+font-weight:300;
+}
+.send-email .left-box p{
+    color: #086C62;
+    font: normal normal medium 25px/40px Raleway;
+    letter-spacing: -0.63px;
+    font-size: 18px;
+    font-weight:300;
+    letter-spacing: -0.65px;
+}
+.sendEmail-title{
+    color: #086C62;
+    font-size: 18px;
+    font-weight: 300;
+    margin:2px 0 10px;
+}
+/* start right-box */
+.right-box{
+    background: url(../images/illustration.png);
+    background-size: cover;
+    background-position-x: 65%;
+    width: 65%;
+    border-left: 2px solid #086C62;
+}
+@media(max-width:991px){
+    .forgetPassword{
+        display: block;
+    }
+    .right-box{
+        display: none;
+    }
+    .left-box{
+        width: 100% !important;
+        text-align: center
+    }
+    
+}
+.header{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+}
+.header nav{
+    flex: 1;
+    text-align: left;
+}
+
+.header nav ul li{
+    display: inline-block;
+}
+.header nav ul li .link{
+    margin-right: 30px;
+    font-size: 20px;
+    position: relative;
+}
+.header nav ul li .link::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #086C62;
+    width: 0px;
+    height: 2px;
+    transition: .3s;
+}
+.header nav ul li .link:hover::after{
+    width: 100%
+}
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+.right-box button{
+    background-color: #086C62;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+.right-box p{
+    font-size: 28px;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    color:#086C62;
+    margin-top: 25px;
+    padding-left: 10px;
+}
+.privay-a{
+    text-decoration: none;
+    display: inline-block;
+    color: #333;
+}
+.privay-p{
+    text-decoration: none;
+    color: #888;
+}

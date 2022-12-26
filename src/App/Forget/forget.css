@@ -1,0 +1,222 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+.link{
+    text-decoration: none;
+    color: #086C62;
+}
+.forgetPassword{
+    display: flex;
+    height: 100vh;
+}
+.forgetPassword .left-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 35%;
+
+}
+.image-forgetpass{
+    width: 350px;
+    height: 350px;
+}
+.forgetPassword .left-box h4{
+color: #086C62;
+font-size:20px;
+font-weight:400;
+}
+.forgetPassword .left-box p{
+    color: #3E3E3E;
+    font-size: 18px;
+    font-weight:300;
+    letter-spacing: -0.65px;
+}
+
+.form-forget-btn,.right-box button{
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10 !important;
+}
+.form-forget-btn::after,.right-box button::after{  
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background-color: #fff;
+    color: #086C62;
+    transition: .3s;
+    mix-blend-mode: soft-light;
+}
+.form-forget-btn:hover::after,.right-box button:hover::after{
+    width: 100%;
+    z-index: 1;
+}
+/* .forgetPassword .left-box{
+    padding: 40px 20px;
+} */
+.forgetPassword .forget-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap:20px;
+    align-items: center
+}
+.forgetPassword .forget-form input{
+    width:80%;
+    height: 40px;
+    padding:25px ;
+    margin:15px 20px ;
+    background:#EAEAEA;
+    box-shadow: 8px 15px 24px #363E9300;
+    border-radius: 25px;
+    border:none;
+    outline: none;
+    opacity: 1;
+}
+.forgetPassword .forget-form .form-forget-btn{
+    width:80%;
+    height: 50px;
+    background: #086C62 0% 0% no-repeat padding-box;
+    box-shadow: 7px 9px 30px #A3A3A347;
+    border-radius: 25px;
+    border:none;
+    outline: none;
+    opacity: 1;
+}
+::placeholder{
+    padding-left: 10px;
+    color: #969696;
+    letter-spacing: -0.68px;
+}
+.forget-title{
+    color: #086C62;
+    font-size: 18px;
+    font-weight: 300;
+    margin:2px 0 10px;
+}
+/* start right-box */
+.logoimage{
+    width: 75px;
+}
+.right-box{
+    background: url(../images/illustration.png);
+    background-size: cover;
+    background-position-x: 65%;
+    width: 65%;
+    border-left: 2px solid #086C62;
+}
+@media(max-width:991px){
+    .forgetPassword{
+        display: block;
+    }
+    .right-box{
+        display: none;
+    }
+    .left-box{
+        width: 100% !important;
+        text-align: center
+    }
+    
+}
+.header{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px;
+}
+.header nav{
+    flex: 1;
+    text-align: left;
+}
+
+.header nav ul li{
+    display: inline-block;
+}
+.header nav ul li .link{
+    margin-right: 30px;
+    font-size: 20px;
+    position: relative;
+}
+.header nav ul li .link::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #086C62;
+    width: 0px;
+    height: 2px;
+    transition: .3s;
+}
+.header nav ul li .link:hover::after{
+    width: 100%
+}
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+.right-box button{
+    background-color: #086C62;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+.right-box p{
+    font-size: 28px;
+    letter-spacing: 3px;
+    line-height: 1.5;
+    color:#086C62;
+    margin-top: 25px;
+    padding-left: 10px;
+}
+.privay-a{
+    text-decoration: none;
+    display: inline-block;
+    color: #333;
+}
+.privay-p{
+    text-decoration: none;
+    color: #888;
+}
+/* start message */
+/* .message{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(8, 108, 98, 0.9);
+    color: white;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+}
+.message.active{
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 999;
+}
+@media (max-width:991px){
+    .message{
+        font-size: 25px;
+        text-align: center;
+    }
+} */
